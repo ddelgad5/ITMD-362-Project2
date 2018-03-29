@@ -5,12 +5,15 @@
 //Begin code
 $('html').removeClass('nojs').addClass('js'); //Proves javascript support
 
+//Initialize Google Autocomplete Function
+$(window).on('load', initialize);
 var autocomplete;
 function initialize() { //Google Autocomplete Feature
   var input = document.getElementById('search-input');
   autocomplete = new google.maps.places.Autocomplete(input);
 }
 
+//Function to get geocode of the searched location
 function getCodes() { //Get long/lat from Google Autocomplete Feature
   var place = autocomplete.getPlace();
   // console.log("Latitude: "+place.geometry.location.lat());
@@ -18,9 +21,16 @@ function getCodes() { //Get long/lat from Google Autocomplete Feature
   var geoLocation = [place.geometry.location.lat(),place.geometry.location.lng()];
   return geoLocation;
 }
-$(window).on('load', initialize);
+
+//Fetch search results with API
 $('#search-form').on('submit', function(e){
   e.preventDefault(); //prevent page change
-  geoLocation = getCodes(); //long/lat array for ACTIVE Network API
+  var geoLocation = getCodes(); //long/lat array for ACTIVE Network API
   console.log(geoLocation);
+  var apiString = "http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat="+geoLocation[0]+"&landmarkLong="+geoLocation[1]+"&api_key=gqea6nsbtt8ucmqwsz2yv4wb";
+  console.log(apiString);
+  $.get(apiString,function(data){
+    console.log(data
+    // TODO: Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=41.96841089999999&landmarkLong=-87.78677499999998&api_key=gqea6nsbtt8ucmqwsz2yv4wb. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing).
+  });
 });
