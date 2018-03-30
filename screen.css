@@ -168,6 +168,28 @@ header * {
   display: none;
 }
 
+/* #search-form styling */
+#search-form {
+  padding-top: 0.5em;
+}
+#search-form input {
+  color: white;
+}
+#search-form li {
+  width: 80%;
+  float: left;
+}
+#search-input {
+  width: 100%;
+  height: inherit;
+}
+#search-form li:last-child {
+  width: 20%;
+}
+#search-form #submit {
+  width: 100%;
+}
+
 /* Responsive cases */
 @media screen and (min-width: 356px) {
   footer {
