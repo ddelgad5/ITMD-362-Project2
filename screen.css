@@ -138,37 +138,34 @@ form ul {
 footer {
   text-align: center;
 }
-#search-form ul {
-  display:inline-block;
-  margin: 0;
-  width: 100%;
-  padding: 0;;
-  border: 1px;
-  margin: 0;
-  border-style: solid;
-  border-color: white;
+
+/* Header styles */
+header {
+  width: 94%;
+  margin: 0 auto;
 }
-#search-input {
-  width: 80%;
-  float: left;
-  padding: inherit;
-  border: inherit;
-  margin: inherit;
-  height: 44px;
-  padding-left: 16px;
-  background: inherit;
-  color: white;
+header * {
+  display: inline;
+  height: 3em;
 }
-#submit {
-  display: block;
-  width: 20% - 16px;
-  float: left;
-  padding: inherit;
-  border: inherit;
-  margin: inherit;
-  height: 44px;
-  background: inherit;
-  color: white;
+
+/* Search bar styles */
+#search-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-bottom: 0;
+  margin-top: -3em; /* 48px /16px = 3 */
+  margin-left: -8.993em; /* 134.835px / 16px = 8.993 */
+}
+#search-title { /* Style as an h3 */
+  font-size: 1.4375em; /* 23 / 16 */
+  line-height: 1.04348em; /* 24 / 23 */
+}
+
+/* Hide home-info is javascript is enabled */
+.js #home-info {
+  display: none;
 }
 
 /* Responsive cases */
