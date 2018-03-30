@@ -169,6 +169,12 @@ header * {
 }
 
 /* Responsive cases */
+@media screen and (min-width: 356px) {
+  footer {
+    height: 3em;
+  }
+}
+
 @media screen and (min-width: 600px) {
 }
 
