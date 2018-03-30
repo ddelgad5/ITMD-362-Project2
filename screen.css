@@ -173,6 +173,14 @@ header * {
   footer {
     height: 3em;
   }
+  #search-title { /* Revert styling to h2 */
+    font-size: 1.75em; /* 28 / 16 */
+    line-height: 1.42857em; /* 40 / 28 */
+  }
+  #search-section {
+    margin-top: -3.5em; /* 56px /16px = 3.5 */
+    margin-left: -10.784em; /* 172.51px / 16px = 10.784 */
+  }
 }
 
 @media screen and (min-width: 600px) {
