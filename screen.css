@@ -149,6 +149,7 @@ header * {
 }
 #search-form input {
   color: white;
+  height: 2.75em; /* 44/16=2.75 */
 }
 #search-form li {
   width: 80%;
