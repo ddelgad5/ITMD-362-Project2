@@ -128,9 +128,10 @@ header * {
   position: absolute;
   top: 25%;
   left: 50%;
+  width: 80vw;
   margin-bottom: 0;
   margin-top: -3em; /* 48px /16px = 3 */
-  margin-left: -8.993em; /* 134.835px / 16px = 8.993 */
+  margin-left: -44vw; /* 134.835px / 16px = 8.993 */
 }
 #search-title { /* Style as an h3 */
   font-size: 1.4375em; /* 23 / 16 */
@@ -174,13 +175,17 @@ header * {
     line-height: 1.42857em; /* 40 / 28 */
   }
   #search-section {
+    width: 87.26vw;
     margin-top: -3.5em; /* 56px /16px = 3.5 */
-    margin-left: -10.784em; /* 172.51px / 16px = 10.784 */
+    margin-left: -46.999vw; /* lines up box with header */
   }
+
 }
 
 @media screen and (min-width: 30.625em) { /* 490/16 = 30.625 */
-  
+  #search-section {
+    width: 89.1vw;
+  }
 }
 
 @media screen and (orientation: landscape) {
