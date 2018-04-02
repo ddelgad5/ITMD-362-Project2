@@ -7,8 +7,8 @@ $('html').removeClass('nojs').addClass('js'); //Proves javascript support
 
 //Initialize Google Autocomplete Function
 $(window).on('load', initialize);
-var autocomplete;
-function initialize() { //Google Autocomplete Feature
+  var autocomplete;
+  function initialize() { //Google Autocomplete Feature
   var input = document.getElementById('search-input');
   autocomplete = new google.maps.places.Autocomplete(input);
 }
