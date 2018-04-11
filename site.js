@@ -30,7 +30,7 @@ $('#search-form').on('submit', function(e){
   var apiString = "http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat="+geoLocation[0]+"&landmarkLong="+geoLocation[1]+"&api_key=gqea6nsbtt8ucmqwsz2yv4wb";
   console.log(apiString);
   $.get(apiString,function(data){
-    console.log(data
+    console.log(data)
     // TODO: Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=41.96841089999999&landmarkLong=-87.78677499999998&api_key=gqea6nsbtt8ucmqwsz2yv4wb. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing).
   });
 });
